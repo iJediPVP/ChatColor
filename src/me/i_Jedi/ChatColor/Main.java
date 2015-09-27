@@ -56,6 +56,7 @@ public class Main extends JavaPlugin {
         new AsyncPChatEvent(this);
         new InvClickEvent(this);
         new PConsumeEvent(this);
+        new PDeathEvent(this);
         new PJoinEvent(this);
         new PotSplashEvent(this);
         new PQuitEvent(this);
