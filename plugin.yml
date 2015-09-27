@@ -23,7 +23,7 @@ commands:
 
 permissions:
    chatColor.*:
-      description: Give access to all ChatColor commands.
+      description: Give access to all of the ChatColor commands.
       children:
          chatColor.chat: true
          chatColor.msg: true
