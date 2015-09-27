@@ -5,4 +5,4 @@
 * Chat color & style (bold, underline, etc..)
 
 **No Permissions**
-* Currently this does not support permissions. This was designed specifically for my own SMP server which does not use a permission system.
+* Currently this does not support permissions. This was designed specifically for my own SMP server which does not use a permission system. I will be working on a branch of this that does support permissions soon.
