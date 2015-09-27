@@ -1,8 +1,22 @@
 # ChatColor
-**This plugin allows player's to change:**
+**This plugin allows players to change:**
 * Name color & style (bold, underline, etc..)
   * If **"nameTagEnabled"** is set to true in the config.yml, the name above the player's head will also change. This uses the scoreboard system so you may want to keep this set to false.
 * Chat color & style (bold, underline, etc..)
+
+**Commands**
+* /chat
+  * Open up the chat editor menu.
+  * Usage: */chat*
+* /msg
+  * Message a player.
+  * Usage: */msg <player> <message>*
+* /tell
+  * Same as /msg.
+  * Usage: */tell <player> <message>*
+* /r
+  * Reply to the last person you messaged or received a message from.
+  * Usage: */r <message>*
 
 **Permissions**
 * chatColor.*
