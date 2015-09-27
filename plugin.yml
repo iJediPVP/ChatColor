@@ -6,13 +6,34 @@ version: 1.0.4
 commands:
    CHAT:
       description: Display chat option menu.
+      permission: chatColor.chat
       usage: /chat
    MSG:
       description: Send a private message to someone.
+      permission: chatColor.msg
       usage: /msg <player> <message>
    TELL:
       description: Same as /msg.
+      permission: chatColor.msg
       usage: /tell <player> <message>
    R:
       description: Reply to the last person that you messaged.
+      permission: chatColor.reply
       usage: /r <message>
+
+permissions:
+   chatColor.*:
+      description: Give access to all ChatColor commands.
+      children:
+         chatColor.chat: true
+         chatColor.msg: true
+         chatColor.reply: true
+   chatColor.chat:
+      description: Give access to /chat command.
+      default: false
+   chatColor.msg:
+      description: Give access to /msg and /tell commands.
+      default: false
+   chatColor.reply:
+      description: Give access to /reply command.
+      default: false

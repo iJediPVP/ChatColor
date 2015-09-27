@@ -72,10 +72,10 @@ public class Com_R implements CommandExecutor {
                         }
 
                     }else{//Else tell them they haven't messaged anyone yet
-                        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "" +  ChatColor.BOLD + "You haven't messaged anyone yet!" );
+                        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "You haven't messaged anyone yet!" );
                     }
                 }catch (NullPointerException npe){
-                    player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "" +  ChatColor.BOLD + "You haven't messaged anyone yet!" );
+                    player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "You haven't messaged anyone yet!" );
                 }
             }
         }
