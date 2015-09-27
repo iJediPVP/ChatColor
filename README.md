@@ -5,11 +5,11 @@
 * Chat color & style (bold, underline, etc..)
 
 **Permissions**
-* "chatColor.*"
+* chatColor.*
   * Give access to all of the ChatColor commands.
-* "chatColor.chat"
+* chatColor.chat
   * Give access to /chat command.
-* "chatColor.msg"
+* chatColor.msg
   * Give access to /msg and /tell commands.
-* "chatColor.reply"
+* chatColor.reply
   * Give access to /reply command.
