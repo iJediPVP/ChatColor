@@ -7,16 +7,16 @@
 **Commands**
 * /chat
   * Open up the chat editor menu.
-  * Usage: */chat*
+  * Usage: **/chat**
 * /msg
   * Message a player.
-  * Usage: */msg <player> <message>*
+  * Usage: **/msg \<player\> \<message\>**
 * /tell
   * Same as /msg.
-  * Usage: */tell <player> <message>*
+  * Usage: **/tell \<player\> \<message\>**
 * /r
   * Reply to the last person you messaged or received a message from.
-  * Usage: */r <message>*
+  * Usage: **/r \<message\>**
 
 **Permissions**
 * chatColor.*
