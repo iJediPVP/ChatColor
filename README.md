@@ -19,4 +19,4 @@
   * Usage: **/r \<message\>**
 
 **No Permissions**
-* Currently this does not support permissions. This was designed specifically for my own SMP server which does not use a permission system. I will be working on a branch of this that does support permissions soon.
+* Currently this does not support permissions. This was designed specifically for my own SMP server which does not use a permission system. Branch that includes permission support: [HERE!] (https://github.com/iJediPVP/ChatColor/tree/withPerms)
