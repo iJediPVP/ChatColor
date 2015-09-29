@@ -1,0 +1,4 @@
+#===== ChatColor Config =====
+#
+#Enable or disable nametags:
+nameTagEnabled: false
