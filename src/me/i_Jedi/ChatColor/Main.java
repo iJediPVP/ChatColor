@@ -26,13 +26,8 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable(){
 
-        //Check if config exists
-        ChatConfig cConfig = new ChatConfig(this);
-        if(!cConfig.exists()){
-            cConfig.setDefaults();
-        }
-
         //See if you need to hide name tags
+        ChatConfig cConfig = new ChatConfig(this);
         boolean isNameTagEnabled = cConfig.isNameTagEnabled();
         if(isNameTagEnabled){
             for(Player p : Bukkit.getOnlinePlayers()){
