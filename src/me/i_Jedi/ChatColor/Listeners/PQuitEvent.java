@@ -10,7 +10,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class PQuitEvent implements Listener {
     //Class vars
@@ -27,11 +29,30 @@ public class PQuitEvent implements Listener {
     @EventHandler
     public void pQuit(PlayerQuitEvent event){
         Player player = event.getPlayer();
+
+        //Remove this player's key from the HM
         try{
             lastMsgHM.remove(player);
         }catch(Exception e){} //Do nothing..
         PlayerInfo pInfo = new PlayerInfo(plugin, player);
         pInfo.removeTeam();
+
+        //Remove this player from other player's HM
+        List<Player> pList = new ArrayList<Player>();
+        for(Player p : lastMsgHM.keySet()){
+            try{
+                if(lastMsgHM.get(p).equals(player)){
+                    pList.add(p);
+                }
+            }catch(NullPointerException npe){
+                continue;
+            }
+        }
+        for(Player p : pList){
+            lastMsgHM.put(p, null);
+        }
+
+        //Cancel task for player
         try{
             Bukkit.getScheduler().cancelTask(PlayerInfo.taskList.get(player));
         }catch(NullPointerException npe){}

@@ -13,7 +13,6 @@ public class ChatConfig {
         plugin.saveDefaultConfig();
     }
 
-
     //Get nametagenabled
     public boolean isNameTagEnabled(){
         try{
