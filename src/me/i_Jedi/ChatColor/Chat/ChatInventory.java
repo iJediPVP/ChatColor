@@ -3,6 +3,7 @@ package me.i_Jedi.ChatColor.Chat;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -14,7 +15,39 @@ public class ChatInventory {
     private Inventory colorSelInv = Bukkit.createInventory(null, 54, "Select Color");
     private Inventory styleSelInv = Bukkit.createInventory(null, 36, "Select Style");
 
+    //******************** Main Inventory ********************
+    //Get main inv
+    public Inventory getMainColorInv(){
+        //Name
+        ItemStack iStack = new ItemStack(Material.NAME_TAG, 1);
+        ItemMeta iMeta = iStack.getItemMeta();
+        iMeta.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Edit Name Color");
+        iMeta.setLore(Arrays.asList(ChatColor.AQUA + "Change the color of your name."));
+        iStack.setItemMeta(iMeta);
+        mainColorInv.setItem(12, iStack);
 
+        //Chat
+        iStack = new ItemStack(Material.BOOK, 1);
+        iMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Edit Chat Color");
+        iMeta.setLore(Arrays.asList(ChatColor.GREEN + "Change the color of your chat."));
+        iStack.setItemMeta(iMeta);
+        mainColorInv.setItem(14, iStack);
+
+        //Exit
+        iStack = new ItemStack(Material.ARROW, 1);
+        iMeta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Exit");
+        iMeta.setLore(Arrays.asList(ChatColor.GOLD + "Close this menu."));
+        iStack.setItemMeta(iMeta);
+        mainColorInv.setItem(22, iStack);
+        return mainColorInv;
+    }
+
+    //Get main inv name
+    public String getMainColorInvName(){
+        return mainColorInv.getName();
+    }
+
+    //******************** Color Selection Inventory ********************
     //Get color selection inv
     public Inventory getColorSelInv(boolean isName){
 
@@ -87,37 +120,7 @@ public class ChatInventory {
         return colorSelInv.getName();
     }
 
-    //Get main inv
-    public Inventory getMainColorInv(){
-        //Name
-        ItemStack iStack = new ItemStack(Material.NAME_TAG, 1);
-        ItemMeta iMeta = iStack.getItemMeta();
-        iMeta.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Edit Name Color");
-        iMeta.setLore(Arrays.asList(ChatColor.AQUA + "Change the color of your name."));
-        iStack.setItemMeta(iMeta);
-        mainColorInv.setItem(12, iStack);
-
-        //Chat
-        iStack = new ItemStack(Material.BOOK, 1);
-        iMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Edit Chat Color");
-        iMeta.setLore(Arrays.asList(ChatColor.GREEN + "Change the color of your chat."));
-        iStack.setItemMeta(iMeta);
-        mainColorInv.setItem(14, iStack);
-
-        //Exit
-        iStack = new ItemStack(Material.ARROW, 1);
-        iMeta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Exit");
-        iMeta.setLore(Arrays.asList(ChatColor.GOLD + "Close this menu."));
-        iStack.setItemMeta(iMeta);
-        mainColorInv.setItem(22, iStack);
-        return mainColorInv;
-    }
-
-    //Get main inv name
-    public String getMainColorInvName(){
-        return mainColorInv.getName();
-    }
-
+    //******************** Style Selection Inventory ********************
     //Get styleSelInv
     public Inventory getStyleSelInv(boolean isName){
         //Determine lore and reset strings
@@ -191,6 +194,7 @@ public class ChatInventory {
         return styleSelInv.getName();
     }
 
+    //******************** Other ********************
     //Create and get item
     public ItemStack getItem(Material mat, short id, ChatColor color, String lore, String lore2){
         ChatColors cc = new ChatColors();

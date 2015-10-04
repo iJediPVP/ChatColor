@@ -70,6 +70,4 @@ public class Main extends JavaPlugin {
         Bukkit.getScheduler().cancelTasks(this);
         getLogger().info("ChatColor has been disabled!");
     }
-
-
 }
