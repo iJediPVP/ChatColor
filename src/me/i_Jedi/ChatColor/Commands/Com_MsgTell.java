@@ -40,20 +40,20 @@ public class Com_MsgTell implements CommandExecutor {
                     try{
                         rPlayer = Bukkit.getPlayer(args[0]);
                     }catch(NullPointerException npe){
-                        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " + ChatColor.GOLD + "Could not find specified player.");
+                        player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " + ChatColor.GOLD + "Could not find specified player.");
                         return true;
                     }
 
 
                     //Make sure the player is not sending a message to themselves
                     if(player.equals(rPlayer)){
-                        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " + ChatColor.GOLD + "You can not send a message to yourself!");
+                        player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " + ChatColor.GOLD + "You can not send a message to yourself!");
                         return true;
                     }
 
                     //Make sure there is a message
                     if(args.length < 2){
-                        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " + ChatColor.GOLD + "You forgot to put a message to send!");
+                        player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " + ChatColor.GOLD + "You forgot to put a message to send!");
 
                         return true;
                     }else{
@@ -82,7 +82,7 @@ public class Com_MsgTell implements CommandExecutor {
                             player.sendMessage(ChatColor.GOLD + "[You] to " + rPlayer.getPlayerListName() + ChatColor.GOLD + ": " + message);
                             rPlayer.sendMessage(ChatColor.GOLD + "[" + player.getPlayerListName() + ChatColor.GOLD + "] to You: " + message);
                         }catch(NullPointerException npe){
-                            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor]" + ChatColor.GOLD + " This player is not online!");
+                            player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor]" + ChatColor.GOLD + " This player is not online!");
                         }
 
                         //Store last messaged stuff
@@ -94,7 +94,7 @@ public class Com_MsgTell implements CommandExecutor {
                     }
                     //Give player a help message for /msg and /tell
                 }else{
-                    player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "Error! Correct usage: " + ChatColor.GREEN + "" + ChatColor.BOLD + "/" + command.toLowerCase() + " <player> <message>");
+                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " +ChatColor.GOLD + "Error! Correct usage: " + ChatColor.GREEN + "" + ChatColor.BOLD + "/" + command.toLowerCase() + " <player> <message>");
                 }
             }
         }

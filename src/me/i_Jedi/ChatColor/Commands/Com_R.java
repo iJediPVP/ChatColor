@@ -43,7 +43,7 @@ public class Com_R implements CommandExecutor {
                         //Check for message
                         String message = null;
                         if(args.length < 1){
-                            player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " + ChatColor.GOLD + "You forgot to put a message to send!");
+                            player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " + ChatColor.GOLD + "You forgot to put a message to send!");
                             return true;
                         }else{
                             for(int x = 0 ; x < args.length; x++){
@@ -67,15 +67,15 @@ public class Com_R implements CommandExecutor {
                                 player.sendMessage(ChatColor.GOLD + "[You] to " + rPlayer.getPlayerListName() + ChatColor.GOLD + ": " + message);
                                 rPlayer.sendMessage(ChatColor.GOLD + "[" + player.getPlayerListName() + ChatColor.GOLD + "] to You: " + message);
                             }catch(NullPointerException npe){
-                                player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor]" + ChatColor.GOLD + " This player is not online!");
+                                player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " + ChatColor.GOLD + " This player is not online!");
                             }
                         }
 
                     }else{//Else tell them they haven't messaged anyone yet
-                        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "You haven't messaged anyone yet!" );
+                        player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " +ChatColor.GOLD + "You haven't messaged anyone yet!" );
                     }
                 }catch (NullPointerException npe){
-                    player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[iChatColor] " +ChatColor.GOLD + "You haven't messaged anyone yet!" );
+                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "[ChatColor] " +ChatColor.GOLD + "You haven't messaged anyone yet!" );
                 }
             }
         }

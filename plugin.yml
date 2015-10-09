@@ -2,7 +2,7 @@ name: ChatColor
 author: i_Jedi
 website: https://www.twitter.com/iJediPVP
 main: me.i_Jedi.ChatColor.Main
-version: 1.0.6
+version: 1.0.7
 commands:
    CHAT:
       description: Display chat option menu.
