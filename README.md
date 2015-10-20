@@ -11,19 +11,20 @@
 * /msg
   * Message a player.
   * Usage: **/msg \<player\> \<message\>**
-* /tell
-  * Same as /msg.
-  * Usage: **/tell \<player\> \<message\>**
-* /r
+* /reply
   * Reply to the last person you messaged or received a message from.
-  * Usage: **/r \<message\>**
+  * Usage: **/reply \<message\>**
 
 **Permissions**
 * chatColor.*
-  * Give access to all of the ChatColor commands.
-* chatColor.chat
+  * Give access to all of the commands & magic style.
+* chatColor.command.*
+  * Give access to all commands
+* chatColor.command.chat
   * Give access to /chat command.
-* chatColor.msg
+* chatColor.command.msg
   * Give access to /msg and /tell commands.
-* chatColor.reply
+* chatColor.command.reply
   * Give access to /reply command.
+* chatColor.style.magic
+  * Give access to magic style.
