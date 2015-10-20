@@ -1,7 +1,7 @@
 # ChatColor
 **This plugin allows players to change:**
 * Name color & style (bold, underline, etc..)
-  * If **"nameTagEnabled"** is set to true in the config.yml, the name above the player's head will also change. This uses the scoreboard system so you may want to keep this set to false.
+  * If **"nameTag"** is set to true in the config.yml, the name above the player's head will also change. This uses the scoreboard system so you may want to keep this set to false.
 * Chat color & style (bold, underline, etc..)
 
 **Commands**
