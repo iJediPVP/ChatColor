@@ -10,7 +10,7 @@ import java.util.Collections;
 public class MainMenu {
 
     //Variables
-    private Inventory mainMenu = Bukkit.createInventory(null, 27, "ChatColor Menu");
+    private Inventory mainMenu = Bukkit.createInventory(null, 36, "ChatColor Menu");
 
     //Get inventory
     public Inventory getInventory(){
