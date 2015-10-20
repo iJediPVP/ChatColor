@@ -1,4 +1,4 @@
-#===== ChatColor Config =====
+# --- ChatColor by i_Jedi ----
 #
-#Enable or disable nametags:
-nameTagEnabled: false
+# Change to true to enable name tag colors.
+nameTag: false

@@ -1,36 +1,40 @@
-name: ChatColor
+name: ChatColor2
+version: 1.1.0
+main: me.ijedi.chatcolor.Main
 author: i_Jedi
-website: https://www.twitter.com/iJediPVP
-main: me.i_Jedi.ChatColor.Main
-version: 1.0.7
+website: www.ijedi.me
 commands:
-   CHAT:
-      description: Display chat option menu.
-      permission: chatColor.chat
-      usage: /chat
-   MSG:
-      description: Send a private message to someone.
-      permission: chatColor.msg
-      usage: /msg <player> <message>
-   TELL:
-      description: Same as /msg.
-      permission: chatColor.msg
-      usage: /tell <player> <message>
-   R:
-      description: Reply to the last person that you messaged.
-      permission: chatColor.reply
-      usage: /r <message>
+  CHAT:
+    description: Display chat menu.
+    usage: /chat
+  MSG:
+    description: Send a message to someone.
+    usage: /msg <player> <message>
+    aliases: [tell]
+  REPLY:
+    description: Reply to the last person you messaged.
+    usage: /reply <message>
+    aliases: [r]
 
 permissions:
-   chatColor.*:
-      description: Give access to all of the ChatColor commands.
-      children:
-         chatColor.chat: true
-         chatColor.msg: true
-         chatColor.reply: true
-   chatColor.chat:
-      description: Give access to /chat command.
-   chatColor.msg:
-      description: Give access to /msg and /tell commands.
-   chatColor.reply:
-      description: Give access to /reply command.
+  chatColor.*:
+     description: Give access to all commands and MAGIC style.
+     children:
+       chatColor.command.chat: true
+       chatColor.command.msg: true
+       chatColor.command.reply: true
+       chatColor.style.magic: true
+  chatColor.command.*:
+     description: Give access to all commands.
+     children:
+        chatColor.command.chat: true
+        chatColor.command.msg: true
+        chatColor.command.reply: true
+  chatColor.command.chat:
+     description: Give access to /chat command.
+  chatColor.command.msg:
+     description: Give access to /msg command.
+  chatColor.command.reply:
+     description: Give access to /reply command.
+  chatColor.style.magic:
+     description: Give access to MAGIC style.
